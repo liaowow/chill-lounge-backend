@@ -3,4 +3,14 @@ class BoardsController < ApplicationController
         boards = Board.all
         render json: boards
     end
+
+    def create
+        board = Board.create(board_params)
+        render json: board
+    end
+
+    private
+    def board_params
+        params.require(:board).permit(:user_id, :cocktail, :message)
+    end
 end

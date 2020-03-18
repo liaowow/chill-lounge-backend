@@ -3,4 +3,14 @@ class ResultsController < ApplicationController
         results = Result.all
         render json: results
     end
+
+    def create
+        result = Result.create(result_params)
+        render json: result
+    end
+
+    private
+    def result_params
+        params.require(:result).permit(:user_id, :eat, :sleep, :exercise, :mood)
+    end
 end

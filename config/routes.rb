@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :boards, only: [:index]
-  resources :results, only: [:index]
+  resources :boards, only: [:index, :create]
+  resources :results, only: [:index, :create]
   resources :users, only: [:index, :create]
 
   post '/login', to: 'auth#login'
