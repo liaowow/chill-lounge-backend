@@ -53,12 +53,12 @@ Result.destroy_all
 Board.destroy_all
 
 # USER
-annie = User.create(username: "liaowow", password_digest: "liaowow", mod: 2)
-liz = User.create(username: "lizkim", password_digest: "lizkim", mod: 3)
-ali = User.create(username: "ali", password_digest: "ali", mod: 4)
-adam = User.create(username: "adam", password_digest: "adam", mod: 0)
-maz = User.create(username: "maz", password_digest: "maz", mod: 5)
-steve = User.create(username: "steve", password_digest: "1209", mod: 6)
+annie = User.create(username: "liaowow", password: "liaowow", mod: 2)
+liz = User.create(username: "lizkim", password: "lizkim", mod: 3)
+ali = User.create(username: "ali", password: "ali", mod: 4)
+adam = User.create(username: "adam", password: "adam", mod: 0)
+maz = User.create(username: "maz", password: "maz", mod: 5)
+steve = User.create(username: "steve", password: "1209", mod: 6)
 
 # RESULT
 Result.create(eat: 0, sleep: 1, exercise: 0, mood: 0, user_id: annie.id)

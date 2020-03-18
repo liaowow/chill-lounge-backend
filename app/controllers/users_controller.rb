@@ -10,13 +10,14 @@ class UsersController < ApplicationController
         if user.valid?
             payload = { user_id: user.id }
             token = JWT.encode(payload, secret, "HS256")
-            render json: { user: user, token: token }
+            results = user.results
+            render json: { user: user, token: token, results: results }
         else
             render json: { errors: user.errors.full_messages }, status: 400
         end
     end
 
-    private 
+    private
     def user_params
         params.permit(:username, :password)
     end
