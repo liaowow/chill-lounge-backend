@@ -6,7 +6,9 @@ class BoardsController < ApplicationController
 
     def create
         board = Board.create(board_params)
-        render json: board
+        boards = Board.all
+        # user = User.find_by(id: board_params[:user_id])
+        render json: boards
     end
 
     private

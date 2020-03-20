@@ -8,7 +8,7 @@ class AuthController < ApplicationController
             results = user.results
             render json: { user: user, token: token, results: results}
         else
-            render json: { errors: user.errors.full_messages }
+            render json: { errors: "Invalid username or password. Try again!" }
         end
     end
 

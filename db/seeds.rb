@@ -32,16 +32,16 @@ messages = [
     "The person who never made a mistake never made anything.",
     "Don't use Excel or Powerpoint documents for your basic word processing needs.",
     "Only those who attempt the impossible can achieve the absurd.",
-    "Remedy tickly coughs with a drink of honey, lemon and water as hot as you can take.",
-    "If you have grandparents or parents - Talk to them more. Ask them about their life experiences.",
-    "When you look around and don't see anyone you respect, its time to leave.",
+    "What could you increase? What could you reduce?",
+    "The hardest things to say are usually the most important.",
+    "When you look around and don't see anyone you respect, it's time to leave.",
     "Life can be a lot more interesting inside your head.",
     "Winter is coming.",
-    "Make choices and dont look back.",
+    "Make choices and don't look back.",
     "Step 1. Give a shit. Step 2. Don't be a dick. Step 3. Know when to let go.",
-    "To cleanly remove the seed from an Avocado, lay a knife firmly across it, and twist.",
+    "It always seems impossible, until it's done.",
     "Things are just things. Don't get too attached to them.",
-    "When having a clear out, ask yourself if an item has any financial, practical or sentimental value. If not, chuck it.",
+    "You never really grow up.",
     "Build something out of LEGO.",
     "Remember that spiders are more afraid of you, than you are of them.",
     "Identify sources of happiness.",
@@ -53,12 +53,12 @@ Result.destroy_all
 Board.destroy_all
 
 # USER
-annie = User.create(username: "liaowow", password: "liaowow", mod: 2)
-liz = User.create(username: "lizkim", password: "lizkim", mod: 3)
-ali = User.create(username: "ali", password: "ali", mod: 4)
-adam = User.create(username: "adam", password: "adam", mod: 0)
-maz = User.create(username: "maz", password: "maz", mod: 5)
-steve = User.create(username: "steve", password: "1209", mod: 6)
+steve = User.create(username: "Egg Again", password: "1209")
+annie = User.create(username: "liaowow", password: "liaowow")
+liz = User.create(username: "Mod 1 Newbie", password: "lizkim")
+ali = User.create(username: "HANX", password: "ali")
+adam = User.create(username: "Mod 3 baby", password: "adam")
+maz = User.create(username: "Dan Abramov", password: "maz")
 
 # RESULT
 Result.create(eat: 0, sleep: 1, exercise: 0, mood: 0, user_id: annie.id)
@@ -74,26 +74,26 @@ Result.create(eat: 1, sleep: 0, exercise: 1, mood: 0, user_id: steve.id)
 Result.create(eat: 0, sleep: 1, exercise: 0, mood: 0, user_id: maz.id)
 
 # BOARD
-10.times do 
-    Board.create(user_id: annie.id, cocktail: cocktails.sample, message: messages.sample)
+30.times do 
+    Board.create(user_id: User.all.sample.id, cocktail: cocktails.sample, message: messages.sample)
 end
 
-10.times do 
-    Board.create(user_id: liz.id, cocktail: cocktails.sample, message: messages.sample)
-end
+# 5.times do 
+#     Board.create(user_id: liz.id, cocktail: cocktails.sample, message: messages.sample)
+# end
 
-10.times do 
-    Board.create(user_id: ali.id, cocktail: cocktails.sample, message: messages.sample)
-end
+# 5.times do 
+#     Board.create(user_id: ali.id, cocktail: cocktails.sample, message: messages.sample)
+# end
 
-10.times do 
-    Board.create(user_id: steve.id, cocktail: cocktails.sample, message: messages.sample)
-end
+# 5.times do 
+#     Board.create(user_id: steve.id, cocktail: cocktails.sample, message: messages.sample)
+# end
 
-10.times do 
-    Board.create(user_id: adam.id, cocktail: cocktails.sample, message: messages.sample)
-end
+# 5.times do 
+#     Board.create(user_id: adam.id, cocktail: cocktails.sample, message: messages.sample)
+# end
 
-10.times do 
-    Board.create(user_id: maz.id, cocktail: cocktails.sample, message: messages.sample)
-end
+# 5.times do 
+#     Board.create(user_id: maz.id, cocktail: cocktails.sample, message: messages.sample)
+# end
