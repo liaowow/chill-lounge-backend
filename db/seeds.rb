@@ -54,11 +54,15 @@ Board.destroy_all
 
 # USER
 steve = User.create(username: "Egg Again", password: "1209")
-annie = User.create(username: "liaowow", password: "liaowow")
+annie = User.create(username: "Mod 6", password: "liaowow")
 liz = User.create(username: "Mod 1 Newbie", password: "lizkim")
 ali = User.create(username: "HANX", password: "ali")
 adam = User.create(username: "Mod 3 baby", password: "adam")
 maz = User.create(username: "Dan Abramov", password: "maz")
+u7 = User.create(username: "Yoda", password: "lizkim")
+u8 = User.create(username: "Jon Snow", password: "ali")
+u9 = User.create(username: "Pikachu", password: "adam")
+u10 = User.create(username: "Coffee Dad", password: "maz")
 
 # RESULT
 Result.create(eat: 0, sleep: 1, exercise: 0, mood: 0, user_id: annie.id)
@@ -77,23 +81,3 @@ Result.create(eat: 0, sleep: 1, exercise: 0, mood: 0, user_id: maz.id)
 30.times do 
     Board.create(user_id: User.all.sample.id, cocktail: cocktails.sample, message: messages.sample)
 end
-
-# 5.times do 
-#     Board.create(user_id: liz.id, cocktail: cocktails.sample, message: messages.sample)
-# end
-
-# 5.times do 
-#     Board.create(user_id: ali.id, cocktail: cocktails.sample, message: messages.sample)
-# end
-
-# 5.times do 
-#     Board.create(user_id: steve.id, cocktail: cocktails.sample, message: messages.sample)
-# end
-
-# 5.times do 
-#     Board.create(user_id: adam.id, cocktail: cocktails.sample, message: messages.sample)
-# end
-
-# 5.times do 
-#     Board.create(user_id: maz.id, cocktail: cocktails.sample, message: messages.sample)
-# end
